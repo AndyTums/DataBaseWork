@@ -1,7 +1,7 @@
 import configparser
 
 
-def conns(filename="D:/Programs/PyCharm Community Edition 2024.1.1/DataBaseWork/database.ini"):
+def conns(filename="../DataBaseWork/database.ini"):
     """ Считывание данных для подключения к БД """
 
     config = configparser.ConfigParser()
