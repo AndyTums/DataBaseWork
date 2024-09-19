@@ -34,9 +34,8 @@ class DBManager:
     def get_vacancies_with_higher_salary(self):
         """ Получает список всех вакансий, у которых зарплата выше средней по всем вакансиям. """
 
-        self.cur.execute("SELECT vacancy_id, vacancy_name, vacancy_salary, vacancy_url, employ_id "
-                         "FROM vacancies GROUP BY vacancy_id "
-                         "HAVING vacancy_salary > (SELECT AVG(vacancy_salary) FROM vacancies)")
+        self.cur.execute("SELECT * FROM vacancies "
+                         "WHERE vacancy_salary > (SELECT AVG(vacancy_salary) DESC FROM vacancies)")
 
         return self.cur.fetchall()
 

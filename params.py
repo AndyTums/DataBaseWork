@@ -1,7 +1,7 @@
 import configparser
 
 
-def conns(filename="../DataBaseWork/database.ini"):
+def conns(filename="database.ini"):
     """ Считывание данных для подключения к БД """
 
     config = configparser.ConfigParser()

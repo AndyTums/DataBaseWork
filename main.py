@@ -72,3 +72,6 @@ def main() -> None:
         continue
 
     return f"\nКонец работы программы"
+
+
+main()
